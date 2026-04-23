@@ -1,0 +1,8 @@
+# robots.txt for James Carlo Dioso portfolio
+# Replace the sitemap URL below with your site domain when ready:
+# e.g. https://your-username.github.io/sitemap.xml
+
+User-agent: *
+Allow: /
+
+Sitemap: https://yourusername.github.io/sitemap.xml

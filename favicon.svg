@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Favicon SVG — monogram/symbol for James Carlo Dioso
+  - Dark rounded square background to match site
+  - Teal accent matching site accent (#4fd1c5)
+  - Clean, high-contrast, minimal for small sizes
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">James Carlo Dioso</title>
+  <desc id="desc">Monogram mark with initials JCD, dark background and teal accent</desc>
+
+  <!-- Rounded dark background -->
+  <rect width="64" height="64" rx="12" ry="12" fill="#071218" />
+
+  <!-- Accent inner rounded square for subtle depth -->
+  <rect x="6" y="6" width="52" height="52" rx="10" ry="10" fill="#08161a" />
+
+  <!-- Monogram: prominent 'J' in accent, smaller 'CD' below for identity -->
+  <text x="50%" y="36%" text-anchor="middle" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-weight="700" font-size="28" fill="#4fd1c5">J</text>
+  <text x="50%" y="72%" text-anchor="middle" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-weight="600" font-size="12" fill="#e6eef3">CD</text>
+
+  <!-- subtle outline for crispness at small sizes -->
+  <rect x="6.5" y="6.5" width="51" height="51" rx="9.5" ry="9.5" fill="none" stroke="#000000" stroke-opacity="0.18"/>
+</svg>

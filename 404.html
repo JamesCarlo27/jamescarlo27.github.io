@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>404 — Page Not Found · James Carlo Dioso</title>
+		<meta name="description" content="404 — Page not found. James Carlo Dioso portfolio." />
+		<link rel="icon" href="favicon.svg" type="image/svg+xml">
+		<meta name="theme-color" content="#071218">
+		<link rel="stylesheet" href="style.css">
+		<style>
+			/* Minimal page-specific rules to match site layout and keep the page centered */
+			.error-404 {
+				min-height: calc(100vh - 160px);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 48px 20px;
+			}
+			.error-card {
+				width: 100%;
+				max-width: 880px;
+				text-align: center;
+				padding: 36px;
+			}
+			.error-code {
+				font-weight: 800;
+				color: var(--accent);
+				font-size: clamp(48px, 10vw, 120px);
+				line-height: 0.9;
+				margin: 0 0 8px;
+				letter-spacing: -1px;
+			}
+			.error-title {
+				font-size: clamp(20px, 3.6vw, 28px);
+				margin: 0 0 12px;
+			}
+			.error-desc {
+				color: var(--muted);
+				font-size: 1rem;
+				margin: 0 0 20px;
+			}
+			.error-actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:10px }
+			@media (max-width:520px){
+				.error-card{padding:24px}
+				.error-desc{font-size:0.95rem}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Header: matches main site header for consistent branding -->
+		<header>
+			<div class="container">
+				<nav>
+					<div class="brand">
+						<div class="logo" aria-hidden="true">J</div>
+						<div class="name">James Carlo Dioso</div>
+					</div>
+					<div class="nav-links" id="navLinks-404">
+						<a href="index.html" class="nav-link">Home</a>
+						<a href="index.html#about" class="nav-link">About</a>
+						<a href="index.html#experience" class="nav-link">Experience</a>
+						<a href="index.html#contact" class="nav-link">Contact</a>
+					</div>
+					<div class="nav-actions">
+						<a class="btn" href="mailto:jamescarlodioso27@gmail.com">Contact</a>
+						<a class="btn primary" href="index.html">Home</a>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<!-- Main error content -->
+		<main>
+			<section class="error-404 container" aria-labelledby="error-heading">
+				<div class="card error-card">
+					<div class="error-code" role="img" aria-hidden="true">404</div>
+
+					<h1 id="error-heading" class="error-title">Page Not Found</h1>
+
+					<p class="error-desc">
+						The page you are looking for does not exist or may have been moved. If you followed a link, please check the URL or return to the homepage.
+					</p>
+
+					<div class="error-actions">
+						<a class="btn primary" href="index.html">Back to Home</a>
+						<a class="btn" href="index.html#home">Go to Homepage Section</a>
+					</div>
+
+					<p style="margin-top:18px; color:var(--muted); font-size:0.92rem;">
+						If you think this is an error, please get in touch: <a href="mailto:jamescarlodioso27@gmail.com">jamescarlodioso27@gmail.com</a>
+					</p>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer: consistent with main site -->
+		<footer>
+			<div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px">
+				<div>© <strong>James Carlo Dioso</strong></div>
+				<div class="section-sub">Professional portfolio — Administrative Support, Data Entry, QA, Lead Generation, Front-End Web Development</div>
+			</div>
+		</footer>
+	</body>
+</html>

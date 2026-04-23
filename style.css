@@ -1,0 +1,124 @@
+/* ====== Root / Theme ====== */
+:root{
+  --bg:#0b0f12;
+  --card:#0f1720;
+  --muted:#9aa6b2;
+  --text:#e6eef3;
+  --accent:#4fd1c5; /* subtle teal accent */
+  --glass: rgba(255,255,255,0.03);
+  --radius:12px;
+  --max-width:1100px;
+  --ff-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* ====== Global ====== */
+html{scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:var(--ff-sans);
+  background:linear-gradient(180deg,#071018 0%, #061217 35%, #07121a 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+a{color:var(--accent); text-decoration:none}
+img{max-width:100%;display:block}
+
+/* ====== Container ====== */
+.container{width:calc(100% - 40px); max-width:var(--max-width); margin:0 auto}
+
+/* ====== Navigation ====== */
+header{
+  position:sticky; top:0; z-index:60; backdrop-filter: blur(6px);
+  background:linear-gradient(180deg, rgba(8,12,14,0.7), rgba(8,12,14,0.45));
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+.brand{display:flex; align-items:center; gap:12px}
+.brand .logo{width:44px; height:44px; border-radius:10px; background:linear-gradient(135deg,var(--accent), #2dd4bf); display:flex; align-items:center; justify-content:center; font-weight:700; color:#022;}
+.brand .name{font-weight:700; font-size:0.95rem}
+
+.nav-links{display:flex; gap:14px; align-items:center}
+.nav-links a{padding:8px 10px; border-radius:8px; color:var(--muted); font-size:0.95rem}
+.nav-links a:hover{color:var(--text); background:var(--glass)}
+.nav-links a.active{color:var(--text); box-shadow: inset 0 -2px 0 var(--accent)}
+
+.nav-actions{display:flex; gap:10px; align-items:center}
+.btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:10px; background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--text); font-weight:600}
+.btn.primary{Background:linear-gradient(90deg,var(--accent), #2dd4bf); color:#002; border:none}
+
+/* Mobile nav */
+.menu-toggle{display:none; background:transparent; border:1px solid rgba(255,255,255,0.04); padding:8px; border-radius:8px}
+
+/* ====== Hero ====== */
+.hero{padding:64px 0 48px}
+.hero-inner{display:grid; grid-template-columns:1fr 320px; gap:36px; align-items:center}
+.hero h1{font-size:1.6rem; margin:0 0 10px; letter-spacing:-0.3px}
+.hero .lead{color:var(--muted); margin-bottom:20px}
+.hero .cta{display:flex; gap:12px}
+
+.avatar{width:100%; max-width:320px; margin-left:auto; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:14px; padding:18px; display:flex; align-items:center; justify-content:center}
+.avatar .img-wrap{width:240px; height:240px; border-radius:12px; overflow:hidden; display:flex; align-items:center; justify-content:center; background:linear-gradient(180deg,#092026,#0b1620)}
+.avatar img{width:100%; height:100%; object-fit:cover}
+.avatar-fallback{display:none; align-items:center; justify-content:center; color:var(--muted); font-weight:700}
+
+/* ====== Sections ====== */
+section{padding:48px 0}
+.section-title{display:flex; align-items:center; gap:12px; margin-bottom:18px}
+.section-title h2{margin:0; font-size:1.05rem}
+.section-sub{color:var(--muted); font-size:0.95rem}
+
+/* ====== Card Grid ====== */
+.grid{display:grid; gap:18px}
+.grid.cols-3{grid-template-columns:repeat(3,1fr)}
+.grid.cols-2{grid-template-columns:repeat(2,1fr)}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px; padding:16px; border:1px solid rgba(255,255,255,0.03)}
+
+/* ====== Work Highlights / Core Strengths ====== */
+.highlights-list{display:grid; grid-template-columns:repeat(2,1fr); gap:12px}
+.highlight{display:flex; gap:12px; align-items:flex-start}
+.highlight .dot{width:44px; height:44px; border-radius:10px; background:linear-gradient(135deg,var(--accent), #2dd4bf); display:flex; align-items:center; justify-content:center; color:#002; font-weight:700}
+
+/* ====== Experience timeline ====== */
+.timeline{display:flex; flex-direction:column; gap:12px}
+.exp{display:flex; gap:16px}
+.exp .meta{min-width:160px; color:var(--muted); font-size:0.9rem}
+.exp .body{flex:1}
+.role{font-weight:700}
+
+/* ====== Skills ====== */
+.skills{display:flex; flex-wrap:wrap; gap:10px}
+.skill{padding:8px 12px; border-radius:999px; background:rgba(255,255,255,0.02); color:var(--muted); font-weight:600; font-size:0.9rem}
+
+/* ====== Contact ====== */
+.contact-grid{display:grid; grid-template-columns:1fr 360px; gap:24px}
+.contact-card{padding:18px}
+
+/* ====== Footer ====== */
+footer{padding:28px 0; color:var(--muted); border-top:1px solid rgba(255,255,255,0.02)}
+
+/* ====== Back to top ====== */
+.to-top{position:fixed; right:20px; bottom:20px; background:var(--card); border-radius:10px; padding:10px; box-shadow:0 6px 20px rgba(2,6,23,0.6); display:flex; align-items:center; justify-content:center; border:1px solid rgba(255,255,255,0.03); cursor:pointer}
+.to-top svg{width:18px;height:18px; color:var(--muted)}
+
+/* ====== Responsive ====== */
+@media (max-width:880px){
+  .hero-inner{grid-template-columns:1fr; text-align:left}
+  .avatar{margin:20px 0 0}
+  .grid.cols-3{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .nav-links{display:none}
+  .menu-toggle{display:inline-block}
+  .brand .name{display:none}
+  .grid.cols-3{grid-template-columns:1fr}
+  .hero h1{font-size:1.25rem}
+}
+
+/* subtle reveal animation */
+.reveal{opacity:0; transform:translateY(10px); transition:all 520ms cubic-bezier(.2,.9,.3,1)}
+.reveal.visible{opacity:1; transform:none}
+
